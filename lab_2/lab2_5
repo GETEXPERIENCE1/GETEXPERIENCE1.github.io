@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+</head>
+<body>
+    <h1>Форма регистрации пользователя</h1>
+    <form method="post">
+        <label for="email" >Email</label>
+        <input type="email" id="email" placeholder="Введите почту" required><br><br>
+        
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Введите пароль" required><br><br>
+
+        
+        <label for="gender">Пол
+        <input type="radio" id="gender">Женский</label>
+        <label for="gender1">
+        <input type="radio" id="gender1">Мужской</label>
+        
+        <br><br>
+
+        <label for="birthd">Год рождения</label>
+        <input type="number" id="birthd" min="1900" max="2026" autocomplete="on"><br><br>
+
+        <span>Я знаю</span>
+        <div>
+          <label for="ru"><input type="checkbox"  id="ru" checked disabled>Русский</label><br>
+          <label for="eng"><input type="checkbox"  id="eng">Английский</label><br>
+          <label for="es"><input type="checkbox"  id="es">Испанский</label><br>
+          <label for="de"><input type="checkbox"  id="de">Немецкий</label><br>
+          <label for="cn"><input type="checkbox"  id="cn">Китайский</label><br>
+        </div>
+        
+        <div class="form-group about-group">
+            <label for="about">O себе</label>
+            <textarea id="about" name="about" 
+              placeholder="Обо мне"></textarea>
+        </div>
+
+        <button type="submit">Готово</button>
+        <button type="reset">Очистить</button>
+
+    </form>
+</body>
+</html> 
