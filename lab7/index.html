@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя визитка | Креативные решения</title>
+    
+    <!-- Подключаем CSS Bootstrap 5.3 (через CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Подключаем иконки Bootstrap (библиотека иконок) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Подключаем наш пользовательский CSS файл -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- ================= 1. ШАПКА САЙТА (НАВИГАЦИЯ) ================= -->
+    <!-- Классы: navbar (основа), navbar-expand-lg (адаптив при ширине >992px), bg-dark (фон), navbar-dark (цвет ссылок) -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container">
+            <!-- Логотип / Имя компании -->
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                <i class="bi bi-stars"></i> Алекс Дизайн
+            </a>
+            
+            <!-- Кнопка для мобильных устройств (Гамбургер) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Ссылки навигации (будут скрыты на телефонах и показаны при нажатии на кнопку) -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Обо мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= 2. ОСНОВНОЙ БЛОК (JUMBOTRON / HERO) ================= -->
+    <!-- В Bootstrap 5 нет отдельного компонента Jumbotron, но его легко сделать с помощью утилит -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container py-5">
+            <h1 class="display-2 fw-bold">Привет, я Алексей!</h1>
+            <p class="lead fs-3 mt-3">Создаю современные и адаптивные сайты под ключ</p>
+            <a href="#contact" class="btn btn-light btn-lg mt-4 px-5 py-3 fw-bold text-primary">
+                <i class="bi bi-chat-dots"></i> Связаться сейчас
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= 3. БЛОК "УСЛУГИ" (Карточки Bootstrap) ================= -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Мои услуги</h2>
+                <div class="bg-primary mx-auto" style="width: 80px; height: 4px;"></div>
+                <p class="lead mt-3">Помогу вашему бизнесу засиять в интернете</p>
+            </div>
+            
+            <!-- 
+                Используем сетку Bootstrap: row (ряд) -> col (колонки)
+                col-md-4 означает: на планшетах и выше блок занимает 4 колонки из 12 (т.е. 3 в ряд)
+                На телефонах блоки автоматически растянутся на 100% ширины
+            -->
+            <div class="row g-4">
+                <!-- Карточка 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="card-body">
+                            <i class="bi bi-laptop fs-1 text-primary"></i>
+                            <h3 class="card-title h4 mt-3">Веб-разработка</h3>
+                            <p class="card-text">Верстка лендингов, многостраничных сайтов и интернет-магазинов на современных технологиях.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="card-body">
+                            <i class="bi bi-phone fs-1 text-primary"></i>
+                            <h3 class="card-title h4 mt-3">Адаптивная верстка</h3>
+                            <p class="card-text">Ваш сайт будет идеально смотреться на любом устройстве: от телефона до большого монитора.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="card-body">
+                            <i class="bi bi-speedometer2 fs-1 text-primary"></i>
+                            <h3 class="card-title h4 mt-3">Оптимизация</h3>
+                            <p class="card-text">Настройка скорости загрузки и SEO-баз для привлечения клиентов из поиска.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 4. БЛОК "О КОМПАНИИ / О СЕБЕ" ================= -->
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold">Немного обо мне</h2>
+                    <p class="lead">Я веб-разработчик с опытом работы более 5 лет.</p>
+                    <p>Моя цель — создавать не просто красивые сайты, а инструменты, которые приносят реальную пользу бизнесу. Работаю с фрилансерами, стартапами и небольшими компаниями. В своей работе использую только проверенные решения и слежу за трендами веб-индустрии.</p>
+                    <div class="mt-4">
+                        <i class="bi bi-check-lg text-primary me-2"></i> Более 50 завершенных проектов <br>
+                        <i class="bi bi-check-lg text-primary me-2"></i> Индивидуальный подход к каждому клиенту <br>
+                        <i class="bi bi-check-lg text-primary me-2"></i> Бесплатная консультация и поддержка 1 месяц
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <!-- Заглушка для изображения (имитация фото профиля) -->
+                    <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mx-auto shadow" style="width: 300px; height: 300px; background-color: #dee2e6 !important;">
+                        <i class="bi bi-person-circle" style="font-size: 280px; color: #adb5bd;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 5. НИЖНЯЯ ЧАСТЬ (FOOTER / ПОДВАЛ) ================= -->
+    <footer id="contact" class="bg-dark text-white pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Блок контактов -->
+                <div class="col-md-6">
+                    <h5 class="text-uppercase mb-3 fw-bold">Контакты</h5>
+                    <p><i class="bi bi-envelope-fill me-2"></i> hello@alex-design.ru</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +7 (999) 123-45-67</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> г. Москва, ул. Тверская, д. 7</p>
+                </div>
+                <!-- Блок социальных сетей -->
+                <div class="col-md-6">
+                    <h5 class="text-uppercase mb-3 fw-bold">Следите за мной</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-3"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="text-white fs-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-3"><i class="bi bi-github"></i></a>
+                        <a href="#" class="text-white fs-3"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 bg-secondary">
+            <div class="text-center">
+                <p class="mb-0 small">&copy; 2026 Алекс Дизайн. Все права защищены. Сайт сделан с любовью</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript Bootstrap (Необходим для работы анимаций модального окна и гамбургера) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
