@@ -1,0 +1,31 @@
+
+
+/* Убираем скругление у карточек, делаем их строже */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem !important;
+}
+
+/* Эффект при наведении на карточку услуг */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1) !important;
+}
+
+/* Стилизация скролла для Chrome (необязательно, просто для эстетики) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0a58ca;
+}
