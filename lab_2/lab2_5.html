@@ -2,47 +2,81 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма</title>
+    <title>Форма регистрации пользователя</title>
+    <style>
+        .form-row {
+            margin-bottom: 10px; display: flex;
+        }
+        .form-label {
+            width: 120px;
+        }
+    </style>
 </head>
 <body>
     <h1>Форма регистрации пользователя</h1>
-    <form method="post">
-        <label for="email" >Email</label>
-        <input type="email" id="email" placeholder="Введите почту" required><br><br>
-        
-        <label for="password">Пароль</label>
-        <input type="password" id="password" placeholder="Введите пароль" required><br><br>
-
-        
-        <label for="gender">Пол
-        <input type="radio" id="gender">Женский</label>
-        <label for="gender1">
-        <input type="radio" id="gender1">Мужской</label>
-        
-        <br><br>
-
-        <label for="birthd">Год рождения</label>
-        <input type="number" id="birthd" min="1900" max="2026" autocomplete="on"><br><br>
-
-        <span>Я знаю</span>
-        <div>
-          <label for="ru"><input type="checkbox"  id="ru" checked disabled>Русский</label><br>
-          <label for="eng"><input type="checkbox"  id="eng">Английский</label><br>
-          <label for="es"><input type="checkbox"  id="es">Испанский</label><br>
-          <label for="de"><input type="checkbox"  id="de">Немецкий</label><br>
-          <label for="cn"><input type="checkbox"  id="cn">Китайский</label><br>
-        </div>
-        
-        <div class="form-group about-group">
-            <label for="about">O себе</label>
-            <textarea id="about" name="about" 
-              placeholder="Обо мне"></textarea>
+    
+    <form action="#" method="post">
+        <div class="form-row">
+            <label class="form-label" for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Введите e-mail" required>
         </div>
 
-        <button type="submit">Готово</button>
-        <button type="reset">Очистить</button>
+        <div class="form-row">
+            <label class="form-label" for="password">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+        </div>
 
+        <div class="form-row">
+            <span class="form-label">Пол</span>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Мужчина</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Женщина</label>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label" for="year">Год рождения</label>
+            <select id="year" name="year">
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+            </select> -й
+        </div>
+
+        <div class="form-row">
+            <span class="form-label">Я знаю</span>
+            <div style="display: flex; flex-direction: column;">
+                <div>
+                    <input type="checkbox" id="lang_ru" name="lang" value="ru" checked disabled>
+                    <label for="lang_ru">Русский</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lang_es" name="lang" value="es">
+                    <label for="lang_es">Испанский</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lang_de" name="lang" value="de">
+                    <label for="lang_de">Немецкий</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lang_en" name="lang" value="en">
+                    <label for="lang_en">Английский</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lang_cn" name="lang" value="cn">
+                    <label for="lang_cn">Китайский</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label" for="about">Обо мне</label>
+            <textarea id="about" name="about" rows="5" cols="40" placeholder="Напишите коротко о себе"></textarea>
+        </div>
+
+        <div class="form-row" style="margin-left: 120px;">
+            <button type="submit">Готово</button>
+            <button type="reset" style="margin-left: 10px;">Очистить</button>
+        </div>
     </form>
 </body>
-</html> 
+</html>

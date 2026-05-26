@@ -5,11 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Организация фреймовой структуры</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            overflow: hidden;
+        }
+        iframe{
+            border: none;
+            height: 100vh;
+        }
+        .menu-frame{
+            width: 200px;
+            border-right: 1px solid;
+        }
+        .content-frame{
+            width: 800px;
+        }   
+    </style>
 </head>
 
 <body>
-    <iframe src="menu.html" width="200" style="height:100vh" name="menu"></iframe>
-    <iframe  width="800" style="height:100vh" name="content"> </iframe>
-    </body>
+<iframe src="/lab2/iframes/menu.html" name="menu" class="menu-frame"></iframe>
 
-</html> 
+<iframe src="about:blank" name="content" class="content-frame"></iframe>
+</body>
+
+</html>
